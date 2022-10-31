@@ -1,0 +1,23 @@
+@import "_reset", "_mixins", "_settings";
+
+* {
+  font-family: $font;
+}
+
+.main {
+  width: 100%;
+  background: map-get($gradients, "bg");
+}
+.seleccion {
+  &__wrapper {
+    width: 100%;
+    padding: 4em;
+  }
+  &__h2 {
+    text-align: center;
+    font-size: map-get($text-size, "subtitle");
+    line-height: 1em;
+    -webkit-text-stroke: 2px rgba(121, 58, 81, 1);
+    color: map-get($colors, "selected");
+  }
+}

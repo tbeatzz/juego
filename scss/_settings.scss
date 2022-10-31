@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+$font: "Press Start 2P", cursive;
+$colors: (
+  "selected": #ffffff,
+  "no-selected": #a8a5a6,
+);
+$text-size: (
+  "small": 1em,
+  "subtitle": 2em,
+  "title": 3em,
+);
+$gradients: (
+  "vino":
+    linear-gradient(0deg, rgba(121, 58, 81, 1) 0%, rgba(42, 22, 29, 1) 100%),
+  "bg":
+    linear-gradient(
+      90deg,
+      rgba(36, 15, 23, 1) 0%,
+      rgba(56, 21, 44, 1) 50%,
+      rgba(46, 9, 24, 1) 100%
+    ),
+);
