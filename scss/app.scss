@@ -49,10 +49,12 @@ body {
     transition: 0.5s;
     @include flex(flex, column, nowrap, center, center);
     gap: 2em;
+    filter: brightness(50%);
   }
   &__a:hover {
     transform: translateY(-2%);
     color: map-get($colors, "selected");
+    filter: brightness(100%);
   }
 }
 .player {
