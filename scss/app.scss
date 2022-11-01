@@ -4,14 +4,24 @@
   font-family: $font;
 }
 
+body {
+  @include flex(flex, column, nowrap, normal, center);
+  background-color: map-get($colors, "black");
+  height: 100vh;
+}
 .main {
+  max-width: 1000px;
+  height: 100%;
   width: 100%;
   background: map-get($gradients, "bg");
 }
 .seleccion {
+  height: 100%;
   &__wrapper {
+    height: 100%;
     width: 100%;
     padding: 4em;
+    @include flex(flex, column, nowrap, space-around, center);
   }
   &__h2 {
     text-align: center;
@@ -19,5 +29,35 @@
     line-height: 1em;
     -webkit-text-stroke: 2px rgba(121, 58, 81, 1);
     color: map-get($colors, "selected");
+  }
+  &__h3 {
+    text-align: center;
+    font-size: map-get($text-size, "small");
+    line-height: 1em;
+
+    color: map-get($colors, "no-selected");
+  }
+  &__players {
+    @include flex(flex, row, nowrap, center, center);
+    gap: 1em;
+  }
+  &__a {
+    @include flex(flex, column, nowrap, center, center);
+    color: map-get($colors, "no-selected");
+    transition: 0.5s;
+  }
+  &__a:hover {
+    transform: translateY(-2%);
+    color: map-get($colors, "selected");
+  }
+}
+.player {
+  &__image {
+    width: 100%;
+    max-width: 250px;
+  }
+  &__ability,
+  &__title {
+    text-transform: capitalize;
   }
 }
